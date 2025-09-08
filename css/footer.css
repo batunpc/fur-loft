@@ -1,0 +1,247 @@
+/* footer */
+footer {
+  position: relative;
+  width: 100vw;
+  height: 85svh;
+  color: var(--bg);
+  padding: 1em 2em 2em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+footer .footer-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--fg);
+  padding: 2em;
+  border-radius: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+footer .footer-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 1;
+}
+
+footer .footer-header h1 {
+  color: #FAF7F0;
+  margin: 0;
+  line-height: 0.9;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  font-size: clamp(3rem, 8vw, 6rem);
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+footer .footer-header h1:hover {
+  opacity: 0.8;
+}
+
+footer .footer-header h2 {
+  color: #FAF7F0;
+  margin: 0;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 400;
+  line-height: 0.9;
+}
+
+footer .click-indicator {
+  position: absolute;
+  top: -3em;
+  right: -8em;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 0.5em;
+  pointer-events: none;
+}
+
+footer .arrow-pointer {
+  width: clamp(2rem, 4vw, 3rem);
+  height: auto;
+  transform: rotate(-45deg);
+  opacity: 0.8;
+}
+
+footer .click-text {
+  color: #FAF7F0;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  margin: 0;
+  white-space: nowrap;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+footer .footer-row {
+  display: flex;
+  gap: 2em;
+  margin-bottom: 8em;
+}
+
+footer .footer-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+footer .footer-col a,
+footer .copyright-info a {
+  color: var(--bg);
+}
+
+footer .footer-col p:not(:first-child) {
+  opacity: 0.35;
+}
+
+footer .copyright-info {
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+footer .copyright-info p {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+footer .heart-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+footer .footer-symbols {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .footer-symbols img {
+  width: auto;
+  height: 2rem;
+}
+
+footer .footer-symbols-1 {
+  top: 0;
+}
+
+footer .footer-symbols-2 {
+  bottom: 0;
+}
+
+footer .explosion-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+footer .explosion-particle-img {
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  width: 150px;
+  border-radius: 1rem;
+  height: auto;
+  object-fit: cover;
+  transform: translateX(-50%);
+  will-change: transform;
+}
+
+@media (max-width: 1000px) {
+  footer {
+    height: 70svh;
+    padding: 0.25em 0.5em 0.5em 0.5em;
+  }
+
+  footer .footer-container {
+    padding: 1em;
+  }
+
+  footer .copyright-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5em;
+  }
+
+  footer .copyright-info p:nth-child(2) {
+    display: none;
+  }
+
+  footer .click-indicator {
+    top: -4em;
+    right: 1em;
+  }
+
+  footer .arrow-pointer {
+    transform: rotate(-30deg);
+  }
+
+  footer .footer-row {
+    flex-direction: column;
+    margin-bottom: 2em;
+  }
+
+  footer .footer-row .footer-col:nth-child(2),
+  footer .footer-row .footer-col:nth-child(4) {
+    display: none;
+  }
+
+  footer .explosion-container {
+    height: 150%;
+    overflow: hidden;
+  }
+
+  footer .footer-header {
+    width: 100%;
+    max-width: none;
+  }
+
+  footer .footer-header h1 {
+    font-size: clamp(4rem, 12vw, 8rem);
+    width: 100%;
+  }
+
+  footer .footer-header h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    width: 100%;
+  }
+
+  footer .copyright-info p {
+    font-size: 0.5rem;
+  }
+
+  footer .heart-icon {
+    width: 14px;
+    height: 14px;
+  }
+}

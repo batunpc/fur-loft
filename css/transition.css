@@ -1,0 +1,41 @@
+/* transition */
+.transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100000;
+  pointer-events: none;
+}
+
+.transition-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(1);
+  transform-origin: top;
+  will-change: transform;
+}
+
+.transition-overlay.overlay-1 {
+  background-color: #FAF7F0;
+}
+
+.transition-overlay.overlay-2 {
+  background-color: #CDFCF6;
+}
+
+.transition-overlay.overlay-3 {
+  background-color: #BCCEF8;
+}
+
+.transition-overlay.overlay-4 {
+  background-color: #98A8F8;
+}
+
+.transition-overlay.overlay-5 {
+  background-color: #5E454B;
+}

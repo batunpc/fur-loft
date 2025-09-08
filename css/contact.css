@@ -1,0 +1,206 @@
+/* Prevent scrolling on contact page */
+.contact-page {
+  overflow: hidden;
+  height: 100svh;
+  max-height: 100svh;
+}
+
+.contact-page body {
+  overflow: hidden;
+}
+
+/* contact - hero */
+.contact {
+  position: relative;
+  width: 100vw;
+  height: 100svh;
+  max-height: 100svh;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: var(--bg);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.contact .contact-card-1,
+.contact .contact-card-2 {
+  align-self: flex-end;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.contact .trail-img {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 1em;
+  transform-origin: center;
+  pointer-events: none;
+  will-change: transform;
+}
+
+@media (max-width: 1000px) {
+  .contact .trail-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 0.5em;
+  }
+}
+
+.contact-card {
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+.contact .contact-card-header-main {
+  margin-bottom: 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact .contact-card-header-main h1 {
+  max-width: 75%;
+}
+
+.contact .contact-card-header-main p {
+  width: 50%;
+}
+
+.contact p.contact-card-header {
+  padding: 0.5em 0.75em;
+  border-radius: 0.25em;
+  width: max-content;
+  background-color: var(--fg);
+  color: var(--bg);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact .contact-symbol {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1rem;
+}
+
+.contact .instagram-link,
+.contact .contact-info-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75em;
+  line-height: 1;
+}
+
+.contact .instagram-link svg,
+.contact .contact-info-link svg {
+  flex-shrink: 0;
+}
+
+.contact .instagram-link span,
+.contact .contact-info-link span {
+  white-space: nowrap;
+}
+
+.contact .contact-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.contact .contact-symbol .contact-link {
+  display: inline-block;
+}
+
+.contact .contact-link:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 1000px) {
+  .contact {
+    height: 100svh;
+    max-height: 100svh;
+    padding: 4em 1.5em 1.5em 1.5em;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    box-sizing: border-box;
+  }
+
+  .contact .contact-card {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact .contact-card-1 {
+    order: 1;
+  }
+
+  .contact .contact-card-2 {
+    order: 2;
+  }
+
+  .contact .contact-symbol {
+    order: 3;
+    position: static;
+    transform: none;
+    display: block;
+    margin-top: 0;
+  }
+
+  .contact .contact-card-header-main {
+    margin-bottom: 1.5em;
+    gap: 0.5em;
+  }
+
+  .contact .contact-card-header-main h1 {
+    max-width: 100%;
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+    line-height: 1.1;
+    margin: 0 0 0.5em 0;
+  }
+
+  .contact .contact-card-header-main p {
+    width: 100%;
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .contact .contact-link {
+    padding: 1.2em;
+    border-radius: 0.75em;
+    background-color: rgba(20, 20, 20, 0.05);
+    border: 1px solid rgba(20, 20, 20, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .contact .instagram-link,
+  .contact .contact-info-link {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+}
