@@ -28,12 +28,18 @@ nav {
 
 nav .logo {
   padding: 0.5em 0.65em;
-  background-color: var(--fg);
 }
 
 nav .logo a {
   color: var(--bg);
   user-select: none;
+  display: block;
+}
+
+nav .logo-image {
+  height: 2em;
+  width: auto;
+  object-fit: contain;
 }
 
 nav .contact-btn {
