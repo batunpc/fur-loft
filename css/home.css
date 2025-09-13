@@ -40,18 +40,21 @@
   width: 100%;
   height: auto;
   object-fit: contain;
+  display: block;
+  margin: 0;
 }
 
 .hero .hero-header-wrapper {
   text-align: center;
   width: 100%;
-  margin-top: -0.5rem;
+  margin-top: -0.35rem;
 }
 
 .hero .hero-header h1 {
   font-size: clamp(3rem, 12vw, 8rem);
-  line-height: 0.9;
+  line-height: 0.8;
   margin: 0;
+  padding: 0;
   word-break: break-word;
   hyphens: auto;
 }
@@ -59,7 +62,7 @@
 .hero .hero-header.hero-header-1 {
   position: relative;
   z-index: 2;
-  margin-bottom: -0.2rem;
+  margin-bottom: -0.5rem;
 }
 
 .hero .hero-header.hero-header-1 h1 {
@@ -422,7 +425,7 @@
   }
 
   .hero .hero-header-wrapper {
-    margin-top: -0.3rem;
+    margin-top: 0;
   }
 
   .hero .hero-image {
