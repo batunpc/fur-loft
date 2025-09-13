@@ -256,8 +256,8 @@
 
 .services-header .services-profile-icon {
   position: relative;
-  width: 130px;
-  height: 130px;
+  width: 400px;
+  height: 400px;
   margin-bottom: 2em;
   overflow: hidden;
 }
@@ -267,30 +267,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2em;
+  gap: 1em;
 }
 
 .services-header .services-header-title {
   margin-bottom: 6em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2em;
-}
-
-.services-header .services-header-title p {
-  margin: 0;
-}
-
-.services-header .services-header-title h1 {
-  margin: 0;
-}
-
-.services-header .big-arrow {
-  font-size: 4.5rem;
-  margin: 0;
-  text-align: center;
-  line-height: 1;
 }
 
 /* home - services */
@@ -413,6 +394,143 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+/* contact cta */
+.contact-cta {
+  position: relative;
+  width: 100vw;
+  height: 100svh;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-cta .contact-button {
+  position: relative;
+  width: 60%;
+  height: 300px;
+  border: 0.75em solid #000;
+  border-radius: 20em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  background: linear-gradient(135deg,
+      #cdfcf6 0%,
+      #bccef8 25%,
+      #98a8f8 50%,
+      #cdfcf6 75%,
+      #bccef8 100%);
+  background-size: 300% 300%;
+  animation: pastelGradientMove 4s ease infinite;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 8px 32px rgba(205, 252, 246, 0.4),
+    0 4px 16px rgba(188, 206, 248, 0.3),
+    inset 0 3px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -3px 0 rgba(94, 69, 75, 0.3),
+    inset 3px 0 0 rgba(255, 255, 255, 0.4),
+    inset -3px 0 0 rgba(94, 69, 75, 0.2);
+  transform: translateY(0);
+}
+
+.contact-cta .contact-button:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow:
+    0 12px 48px rgba(205, 252, 246, 0.5),
+    0 6px 24px rgba(188, 206, 248, 0.4),
+    inset 0 4px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -4px 0 rgba(94, 69, 75, 0.4),
+    inset 4px 0 0 rgba(255, 255, 255, 0.5),
+    inset -4px 0 0 rgba(94, 69, 75, 0.3);
+}
+
+.contact-cta .contact-button:active {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow:
+    0 6px 24px rgba(205, 252, 246, 0.4),
+    0 3px 12px rgba(188, 206, 248, 0.3),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -2px 0 rgba(94, 69, 75, 0.2),
+    inset 2px 0 0 rgba(255, 255, 255, 0.3),
+    inset -2px 0 0 rgba(94, 69, 75, 0.15);
+}
+
+.contact-cta a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.contact-cta .contact-button::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.1) 100%);
+  border-radius: calc(2em - 2px);
+  z-index: -1;
+}
+
+.contact-cta .contact-text-small {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-cta .contact-text-large {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-cta .contact-text-large h1 {
+  font-size: 7rem;
+}
+
+@keyframes pastelGradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  25% {
+    background-position: 100% 25%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  75% {
+    background-position: 0% 75%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .contact-cta .contact-button {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contact-cta .contact-button {
+    width: 90%;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -592,6 +710,28 @@
   .about-text {
     font-size: clamp(1.2rem, 5vw, 2rem);
     line-height: 1.9;
+  }
+
+  /* contact cta responsive styles */
+  .contact-cta {
+    height: max-content;
+    padding: 8em 1em;
+  }
+
+  .contact-cta .contact-button {
+    width: 100%;
+    height: 250px;
+    gap: 1em;
+    border-radius: 2em;
+  }
+
+  .contact-cta .contact-text-small {
+    width: 90%;
+    text-align: center;
+  }
+
+  .contact-cta .contact-text-large h1 {
+    font-size: 3rem;
   }
 
 }
