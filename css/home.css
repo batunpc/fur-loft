@@ -356,9 +356,15 @@
   color: #faf7f0;
 }
 
+.home-page .stats .stats-item-4 {
+  flex: 1;
+  background-color: #cdfcf6;
+}
+
 .home-page .stats .stats-item-1,
 .home-page .stats .stats-item-2,
-.home-page .stats .stats-item-3 {
+.home-page .stats .stats-item-3,
+.home-page .stats .stats-item-4 {
   aspect-ratio: 16/7;
   padding: 2em;
   border-radius: 1em;
@@ -366,7 +372,8 @@
 
 .home-page .stats .stats-item-1 h3,
 .home-page .stats .stats-item-2 h3,
-.home-page .stats .stats-item-3 h3 {
+.home-page .stats .stats-item-3 h3,
+.home-page .stats .stats-item-4 h3 {
   margin: 0 0 1em 0;
   font-size: 2.25rem;
   font-weight: 600;
@@ -374,7 +381,8 @@
 
 .home-page .stats .stats-item-1 p,
 .home-page .stats .stats-item-2 p,
-.home-page .stats .stats-item-3 p {
+.home-page .stats .stats-item-3 p,
+.home-page .stats .stats-item-4 p {
   margin: 0;
   line-height: 1.5;
   font-size: 20px;
@@ -698,7 +706,8 @@
 
   .home-page .stats .stats-item-1,
   .home-page .stats .stats-item-2,
-  .home-page .stats .stats-item-3 {
+  .home-page .stats .stats-item-3,
+  .home-page .stats .stats-item-4 {
     padding: 2em;
   }
 
