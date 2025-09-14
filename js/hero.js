@@ -23,14 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!isMobile) {
       // Set initial state for stats items (Our Process cards) only if not played
       if (!statsAnimationPlayed) {
-        gsap.set([".home-page .stats-item-1", ".home-page .stats-item-2", ".home-page .stats-item-3"], {
+        gsap.set([".home-page .stats-item-1", ".home-page .stats-item-2", ".home-page .stats-item-3", ".home-page .stats-item-4", ".home-page .stats-item-4-image"], {
           scale: 0,
         });
       }
 
       // Gradual animation for Our Process section
       const statsAnimation = gsap.to(
-        [".home-page .stats-item-1", ".home-page .stats-item-2", ".home-page .stats-item-3"],
+        [".home-page .stats-item-1", ".home-page .stats-item-2", ".home-page .stats-item-3", ".home-page .stats-item-4-image", ".home-page .stats-item-4"],
         {
           scale: 1,
           duration: 1,
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollTriggerInstances.push(statsAnimation.scrollTrigger);
     } else {
       // On mobile, ensure stats items are visible by default
-      gsap.set([".home-page .stats-item-1", ".home-page .stats-item-2", ".home-page .stats-item-3"], {
+      gsap.set([".home-page .stats-item-1", ".home-page .stats-item-2", ".home-page .stats-item-3", ".home-page .stats-item-4", ".home-page .stats-item-4-image"], {
         scale: 1,
       });
     }

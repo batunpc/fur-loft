@@ -153,21 +153,18 @@
     order: 1;
   }
 
-  .contact .contact-card-2 {
+  .contact .contact-card-header-main {
+    order: -1;
+    margin-bottom: 1.5em;
+    gap: 0.5em;
+  }
+
+  .contact .contact-actions {
     order: 2;
   }
 
-  .contact .contact-symbol {
+  .contact-info-bottom-right {
     order: 3;
-    position: static;
-    transform: none;
-    display: block;
-    margin-top: 0;
-  }
-
-  .contact .contact-card-header-main {
-    margin-bottom: 1.5em;
-    gap: 0.5em;
   }
 
   .contact .contact-card-header-main h1 {
@@ -202,5 +199,125 @@
     align-items: center;
     width: 100%;
     text-align: center;
+  }
+}
+
+/* Address and Hours Styling */
+.contact .contact-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  padding: 1em;
+  border-radius: 0.75em;
+  background-color: rgba(20, 20, 20, 0.05);
+  border: 1px solid rgba(20, 20, 20, 0.1);
+  width: 100%;
+  max-width: none;
+}
+
+.contact .contact-info-section h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.contact .contact-info-section .contact-info-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.contact .contact-info-section .contact-info-link svg {
+  margin-top: 0.1em;
+  flex-shrink: 0;
+}
+
+.opening-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+.opening-hours p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0.25em 0;
+  border-bottom: 1px solid rgba(20, 20, 20, 0.1);
+}
+
+.opening-hours p:last-child {
+  border-bottom: none;
+}
+
+.opening-hours .day {
+  font-weight: 500;
+}
+
+.opening-hours .hours {
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* Side-by-side layout for main content */
+.contact-main-content {
+  display: flex;
+  gap: 2em;
+  align-items: flex-start;
+}
+
+.contact-description {
+  flex: 1;
+}
+
+/* Contact Actions Styling */
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1.5em;
+}
+
+/* Bottom Right Info Sections */
+.contact-info-bottom-right {
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  width: 400px;
+  z-index: 10;
+}
+
+.contact-info-bottom-right .contact-info-section {
+  width: 100%;
+  max-width: none;
+}
+
+@media (max-width: 1000px) {
+  .contact .contact-info-section {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .contact .contact-info-section .contact-info-link {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .contact-main-content {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .contact-info-bottom-right {
+    position: static;
+    width: 100%;
+    margin-top: 2em;
   }
 }

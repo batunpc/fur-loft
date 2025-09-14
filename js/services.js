@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTriggerInstances.push(pinTrigger);
 
         const scrollAnimation = gsap.to(serviceCardInner, {
-          y: `-${(services.length - index) * 14}vh`,
+          y: `-${(services.length - index) * 16}vh`,
           ease: 'none',
           scrollTrigger: {
             trigger: service,

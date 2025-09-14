@@ -73,7 +73,7 @@ p.mn {
 .contact-cta {
   position: relative;
   width: 100vw;
-  height: 100svh;
+
   padding: 2em;
   display: flex;
   justify-content: center;
@@ -173,7 +173,7 @@ p.mn {
   }
 
   .contact-cta {
-    height: max-content;
+
     padding: 8em 2em;
   }
 

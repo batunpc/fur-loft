@@ -4,7 +4,7 @@ footer {
   width: 100vw;
   height: 85svh;
   color: var(--bg);
-  padding: 1em 2em 2em 2em;
+  padding: 0em 2em 2em 2em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -180,7 +180,7 @@ footer .explosion-particle-img {
 @media (max-width: 1000px) {
   footer {
     height: 70svh;
-    padding: 0.25em 0.5em 0.5em 0.5em;
+    padding: 0em 0.5em 0.5em 0.5em;
   }
 
   footer .footer-container {
