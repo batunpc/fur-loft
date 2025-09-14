@@ -155,16 +155,18 @@
 
   .contact .contact-card-header-main {
     order: -1;
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
     gap: 0.5em;
   }
 
   .contact .contact-actions {
     order: 2;
+    margin-top: 0.25em;
   }
 
   .contact-info-bottom-right {
     order: 3;
+    margin-top: 0.5em;
   }
 
   .contact .contact-card-header-main h1 {
@@ -279,7 +281,6 @@
   display: flex;
   flex-direction: column;
   gap: 1em;
-  margin-top: 1.5em;
 }
 
 /* Bottom Right Info Sections */
@@ -289,7 +290,7 @@
   right: 2em;
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  gap: 1em;
   width: 400px;
   z-index: 10;
 }
@@ -318,6 +319,42 @@
   .contact-info-bottom-right {
     position: static;
     width: 100%;
-    margin-top: 2em;
+    margin-top: 0.5em;
+  }
+
+  /* Create horizontal icon layout for mobile */
+  .contact-actions {
+    display: flex;
+    flex-direction: row !important;
+    gap: 0.5em;
+    justify-content: center;
+    margin-top: 0.5em;
+    width: 100%;
+  }
+
+  .contact-actions .contact-link {
+    flex: 1;
+    padding: 0.5em 0.25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-actions .contact-info-link,
+  .contact-actions .instagram-link {
+    flex-direction: column;
+    gap: 0.5em;
+    font-size: 0.75rem;
+  }
+
+  .contact-actions svg {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 0.25em;
+  }
+
+  .contact-actions span {
+    display: none;
   }
 }
